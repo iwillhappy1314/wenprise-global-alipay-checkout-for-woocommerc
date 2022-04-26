@@ -6,43 +6,15 @@
     "paragonie/random_compat": "<9.99"
   },
   "require-dev": {
-    "coenjacobs/mozart": "^0.5.1"
   },
   "autoload": {
     "psr-4": {
       "WenpriseGlobalAlipay\\": "src/"
-    },
-    "classmap": [
-      "src/Deps/classes/"
-    ]
+    }
   },
   "config": {
     "preferred-install": {
       "*": "dist"
     }
-  },
-  "extra": {
-    "mozart": {
-      "dep_namespace": "WenpriseGlobalAlipay\\Deps\\",
-      "dep_directory": "src/Deps/",
-      "classmap_directory": "src/Deps/classes/",
-      "classmap_prefix": "RSC",
-      "packages": [
-        "wenprise/wordpress-dispatcher",
-        "symfony/http-foundation",
-        "php-http/guzzle6-adapter",
-        "paragonie/random_compat"
-      ]
-    }
-  },
-  "scripts": {
-    "post-install-cmd": [
-      "vendor/bin/mozart compose",
-      "composer dump-autoload"
-    ],
-    "post-update-cmd": [
-      "vendor/bin/mozart compose",
-      "composer dump-autoload"
-    ]
   }
 }
