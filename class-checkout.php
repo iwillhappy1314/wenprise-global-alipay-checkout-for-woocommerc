@@ -357,7 +357,7 @@ class Wenprise_Global_Alipay_Gateway extends \WC_Payment_Gateway
         // 生成订单后清空购物车，以免订单重复
         WC()->cart->empty_cart();
 
-        do_action('woocommerce_WENPRISE_GLOBAL_ALIPAY_before_payment_redirect', $response);
+        do_action('woocommerce_wenprise_global_alipay_before_payment_redirect', $response);
 
         update_post_meta($order_id, '_gateway_payment_url', $response->getRedirectUrl());
 
